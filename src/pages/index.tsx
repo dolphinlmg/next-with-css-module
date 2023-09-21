@@ -15,7 +15,9 @@ export default function Home() {
         </ul>
       </div>
       <div className={style['button-container']}>
-        <Button>Hello world!</Button>
+        <Button onClick={() => console.log('button clicked')}>
+          Hello world!
+        </Button>
       </div>
     </>
   );
