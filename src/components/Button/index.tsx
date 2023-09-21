@@ -4,9 +4,15 @@ interface ButtonProps {
   width?: number;
   height?: number;
   children?: React.ReactNode;
+  onClick?: VoidFunction;
 }
 
-export default function Button({ width, height, children }: ButtonProps) {
+export default function Button({
+  width,
+  height,
+  children,
+  onClick,
+}: ButtonProps) {
   return (
     <button
       className={style.container}
@@ -18,6 +24,7 @@ export default function Button({ width, height, children }: ButtonProps) {
             }
           : {}
       }
+      onClick={onClick}
     >
       {children}
     </button>
